@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^accounts/', include('django.contrib.auth.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name="index"),
-    url(r'^userinfo', include('apps.userinfo.urls')),
+    url(r'^userinfo/', include('apps.userinfo.urls')),
 ]
