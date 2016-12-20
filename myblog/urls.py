@@ -15,12 +15,18 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from apps.core.views import index
+from apps.core.views import index as site_index
+from apps.blog.block.views import index as block_index
 
 
 urlpatterns = [
     url(r'^accounts/', include('django.contrib.auth.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^$', index, name="index"),
+    url(r'^$', site_index, name="index"),
     url(r'^userinfo/', include('apps.userinfo.urls')),
+    
+    #blog
+    url(r'^blog/', block_index, name='blog'),
+    url(r'^article/', include('apps.blog.article.urls')),
+    url(r'^comment/', include('apps.blog.comment.urls')),
 ]
