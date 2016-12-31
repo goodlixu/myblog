@@ -24,7 +24,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', site_index, name="index"),
     url(r'^userinfo/', include('apps.userinfo.urls')),
-    
+    url(r'^core/', include('apps.core.urls')),    
+
     #blog
     url(r'^blog/', block_index, name='blog'),
     url(r'^article/', include('apps.blog.article.urls')),

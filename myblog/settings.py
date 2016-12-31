@@ -25,7 +25,7 @@ SECRET_KEY = ')lp40*yx#)1w0+6wiw3n0a+w)j2e#08c6=mi*nmqwa8^mb2x)_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["115.28.66.99", "127.0.0.1", "www.goodlixu.cn"]
+ALLOWED_HOSTS = ["115.28.66.99", "127.0.0.1", "www.goodlixu.cn", "goodlixu.cn"]
 
 
 # Application definition
@@ -122,7 +122,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
@@ -134,4 +135,5 @@ EMAIL_HOST = "smtp.163.com"
 EMAIL_PORT = 25
 EMAIL_HOST_USER = "goodlixu@163.com"
 EMAIL_HOST_PASSWORD = "Lx1534862486"
+
 DEFAULT_FROM_EMAIL = "goodlixu@163.com"
