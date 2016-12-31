@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}关于我们{% endblock %}
+{% block body %}
+<div class="row">
+  <div class="col-md-12">
+    <ol class="breadcrumb">
+      <li><a href="/">主页</a></li>
+      <li>关于我们</li>
+    </ol>
+  </div>
+</div>
+<h3>本站为个人网站。</h3>
+<h3>有意见或建议请<a href={% url 'contact' %}>联系我们</h3>
+{% endblock %}
